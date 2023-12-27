@@ -39,3 +39,4 @@ Note: The line has to be appended since the shell needs to be cleared (?) for no
     clear #for background artifacting
 fi
 ```
+NOTE: This only changes the console & not the login shell
