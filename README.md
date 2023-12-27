@@ -14,11 +14,12 @@ see 1.2 for explanation on colors
 
 Note: The line has to be appended since the shell needs to be cleared (?) for no artifacting
 
-## 1.2 [Bash Configuration Files](https://wiki.archlinux.org/title/Bash#Configuration_files) (?)
+## 1.2 in [Bash Configuration Files](https://wiki.archlinux.org/title/Bash#Configuration_files) (?)
 
 #### $HOME/.bashrc
 
 ```sh
+# gruvbox dark hard (?)
     if [ "$TERM" = "linux" ]; then
     echo -en "\e]P01d2021" #black
     echo -en "\e]P83C3836" #darkgrey
@@ -40,3 +41,15 @@ Note: The line has to be appended since the shell needs to be cleared (?) for no
 fi
 ```
 NOTE: This only changes the console & not the login shell
+
+## 1.3 lydm 
+
+#### /lib/systemd/system/ly.service
+
+```sh
+...
+[Service]
+Type=idle
+ExecStartPre=/usr/bin/printf '%%b' '\e]P01D2021\e]P7EBDBB2\ec'
+...
+```
