@@ -58,6 +58,6 @@ ExecStartPre=/usr/bin/printf '%%b' '\e]P01D2021\e]P7EBDBB2\ec'
 ## 2.1 $XDG_CONFIG_HOME/qutebrowser/config.py
 
 ```py
-c.fileselect.single_file.command = ['foot', 'ranger', '--choosefile', '{}']
-c.fileselect.multiple_files.command = ['foot', 'ranger', '--choosefiles', '{}']
+c.fileselect.single_file.command = ['foot', '-e', 'ranger', '--choosefile', '{}']
+c.fileselect.multiple_files.command = ['foot', '-e', 'ranger', '--choosefiles', '{}']
 ```
